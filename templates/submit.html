@@ -1,0 +1,14 @@
+
+<h1>There are in total {{ count }} words in your text</h1>
+<h3>which is:</h3>
+{{ fulltext }}
+
+<br><br>
+<a href="{% url 'Chetna' %}">Start again..?</a>
+
+<h1>Word Count:</h1>
+{% for word, counttotal in wd_dic %}
+ <ul>
+  <li>{{ word }} = {{ counttotal }} times</li>
+ </ul>
+{% endfor %}
